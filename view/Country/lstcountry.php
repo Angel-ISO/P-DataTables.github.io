@@ -74,10 +74,16 @@ function setIdCountry($id)
 
             // Abrir el modal y mostrar el nombre del usuario
             abrirModal(fila[0],fila[1]);
-
-
         });
         
+        $('#mispaises tbody').on('click', 'btn-editar-modal', function() {
+        row =tabla.row($(this).parents('tr'));
+        var fila = table.row($(this).closest('tr'));
+        idCountryBorrar = fila[0];
+        $('#updateData').modal('show');
+         });
+
+
     });
 
 
